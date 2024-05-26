@@ -1,0 +1,226 @@
+/* Base styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: space-between; /* 将子元素在容器中均匀分布 */
+}
+
+.language-toggle {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.language-toggle button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.language-toggle button:hover {
+    background-color: #45a049;
+}
+
+.controls label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.controls select, .controls input[type="checkbox"] {
+    margin-bottom: 15px;
+}
+
+/* 分割线样式 */
+#generateButton {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    font-size: 14px;
+    margin-bottom: 10px; /* 添加底部间距 */
+}
+
+/* 分割线样式 */
+.separator {
+    clear: both; /* 清除浮动 */
+    border-top: 1px solid #ccc;
+    margin-top: 90px;
+    margin-bottom: 20px;
+}
+
+#generateButton:hover {
+    background-color: #0077a3;
+}
+
+.history {
+    display: flex;
+    flex-direction: column; /* 垂直布局 */
+    margin-top: 20px;
+}
+
+.historyTitle {
+    margin-bottom: 10px;
+}
+
+#clearHistoryButton {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    float: right;
+    align-self: flex-end; /
+}
+
+
+#clearHistoryButton:hover {
+    background-color: #d32f2f;
+}
+
+/* Responsive styles */
+
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        margin: 30px auto;
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .controls label {
+        font-size: 14px;
+    }
+
+    .controls select, .controls input[type="checkbox"] {
+        margin-bottom: 10px;
+    }
+
+    #generateButton, #clearHistoryButton {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* 添加以下样式来美化单独的行元素 */
+
+/* 密码长度标签 */
+#lengthLabel {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* 密码长度选择框 */
+#length {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* 保证元素尺寸包括边框和填充 */
+}
+/* 添加以下样式来将两组标签和复选框显示在同一行 */
+
+/* 小写字母标签 */
+#lowercaseLabel, #uppercaseLabel {
+    display: inline-block;
+    width: 25%; /* 两个标签占据一行的一半宽度 */
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* 复选框 */
+#lowercase, #uppercase {
+    display: inline-block;
+    width: auto; /* 恢复默认宽度 */
+    margin-right: 10px;
+}
+
+
+#numbersLabel, #symbolsLabel {
+    display: inline-block;
+    width: 25%; /* 两个标签占据一行的一半宽度 */
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+/* 复选框 */
+#numbers, #symbols {
+    display: inline-block;
+    width: auto; /* 恢复默认宽度 */
+    margin-right: 10px;
+}
+
+/* 添加分隔线样式 */
+.history-divider {
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* 历史项样式 */
+.history-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* 间距 */
+}
+
+/* 密码内容样式 */
+.history-item span {
+    flex-grow: 1; /* 拉伸以填充剩余空间 */
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    margin-right: 10px; /* 间距 */
+    /* font-family: monospace; 使用等宽字体 */
+    font-weight: bold;
+    font-family: "San Francisco", Arial, sans-serif;
+}
+
+/* 复制和删除按钮样式 */
+.history-item button {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.history-item button:hover {
+    background-color: #005f77;
+}
+
+/* 使按钮之间有间距 */
+.history-item button + button {
+    margin-left: 5px;
+}

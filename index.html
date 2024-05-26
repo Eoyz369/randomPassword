@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link type="image/png" sizes="96x96" rel="icon" href="favicon.png">
+
+</head>
+
+<body>
+    <div class="language-toggle">
+        <button id="toggleLanguage">Toggle Language</button>
+    </div>
+    <div class="container">
+        <h1 id="title">Password Generator</h1>
+        <div class="controls">
+            <label for="length" id="lengthLabel">Password Length:</label>
+            <select id="length"></select>
+            <label for="lowercase" id="lowercaseLabel">Include Lowercase (a-z):</label>
+            <input type="checkbox" id="lowercase" checked>
+            <label for="uppercase" id="uppercaseLabel">Include Uppercase (A-Z):</label>
+            <input type="checkbox" id="uppercase" checked>
+            </br>
+            <label for="numbers" id="numbersLabel">Include Numbers (0-9):</label>
+            <input type="checkbox" id="numbers" checked>
+            <label for="symbols" id="symbolsLabel">Include Symbols:</label>
+            <input type="checkbox" id="symbols" checked>
+            </br>
+            <button id="generateButton">Generate Password</button>
+        </div>
+        <hr class="separator">
+
+
+        <div class="history" id="history">
+            <h2 class="historyTitle" id="historyTitle">History</h2>
+            <div class="historyPassword" id="historyPassword"></div>
+            <button id="clearHistoryButton">Clear History</button>
+
+        </div>
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
